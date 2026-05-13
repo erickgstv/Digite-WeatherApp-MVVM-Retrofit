@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private val apiKey = "SUA_API_KEY_AQUI"
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -116,7 +118,7 @@ class MainActivity : AppCompatActivity() {
         hum.text = "0%"
         feels.text = "0°C"
         wind.text = "0 km/h"
-        root.setBackgroundColor(Color.WHITE)
+        root.setBackgroundColor(Color.parseColor("#455A64"))
     }
 
     private fun hideKeyboard() {

@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.PrevisaoDoTempo" parent="Base.Theme.PrevisaoDoTempo" />
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#87CEEB</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_sun</item>
+        <item name="postSplashScreenTheme">@style/Theme.PrevisaoDoTempo</item>
+    </style>
 </resources>
