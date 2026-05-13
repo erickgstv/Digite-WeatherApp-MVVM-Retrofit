@@ -22,7 +22,7 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewModel: WeatherViewModel
-    private val apiKey = "SUA_API_KEY_AQUI"
+    private val apiKey = "SUA_CHAVE_API_AQUI"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
