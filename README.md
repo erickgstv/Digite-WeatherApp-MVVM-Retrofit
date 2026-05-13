@@ -33,6 +33,8 @@ O projeto utiliza o padrão **MVVM**, garantindo a separação de responsabilida
 2. Obtenha uma chave de API gratuita no site [OpenWeatherMap](https://openweathermap.org/).
 3. No arquivo `MainActivity.kt`, insira sua chave na variável correspondente:
    ```kotlin
+   <img width="1080" height="2110" alt="WhatsApp Image 2026-05-13 at 15 51 58" src="https://github.com/user-attachments/assets/1f1e40a0-409a-45a3-928e-99d3c4157627" />
+
    private val apiKey = "SUA_API_KEY_AQUI"
    ```
 4. Compile e execute o projeto através do Android Studio.
