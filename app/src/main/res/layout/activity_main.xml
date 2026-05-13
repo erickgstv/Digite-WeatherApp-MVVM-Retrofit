@@ -57,6 +57,7 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="30dp"
+            android:textColor="#FFFFFF"
             android:text="Cidade" />
 
         <ImageView
@@ -71,6 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="48sp"
+            android:textColor="#FFFFFF"
             android:text="0°C" />
 
         <TextView
@@ -79,6 +81,7 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textAllCaps="true"
+            android:textColor="#FFFFFF"
             android:text="Descrição" />
 
         <LinearLayout
@@ -99,12 +102,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Umidade"
+                    android:textColor="#FFFFFF"
                     android:textSize="12sp" />
                 <TextView
                     android:id="@+id/tvHumidity"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0%"
+                    android:textColor="#FFFFFF"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -118,12 +123,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sensação"
+                    android:textColor="#FFFFFF"
                     android:textSize="12sp" />
                 <TextView
                     android:id="@+id/tvFeelsLike"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0°C"
+                    android:textColor="#FFFFFF"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -137,16 +144,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Vento"
+                    android:textColor="#FFFFFF"
                     android:textSize="12sp" />
                 <TextView
                     android:id="@+id/tvWindSpeed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0 km/h"
+                    android:textColor="#FFFFFF"
                     android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvForecast"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:padding="8dp" />
 
     </LinearLayout>
 

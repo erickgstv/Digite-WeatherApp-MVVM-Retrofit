@@ -6,7 +6,12 @@ data class WeatherResponse(
     @SerializedName("main") val main: Main,
     @SerializedName("weather") val weather: List<Weather>,
     @SerializedName("wind") val wind: Wind,
-    @SerializedName("name") val name: String
+    @SerializedName("name") val name: String,
+    @SerializedName("dt_txt") val dtTxt: String? = null
+)
+
+data class ForecastResponse(
+    @SerializedName("list") val list: List<WeatherResponse>
 )
 
 data class Main(

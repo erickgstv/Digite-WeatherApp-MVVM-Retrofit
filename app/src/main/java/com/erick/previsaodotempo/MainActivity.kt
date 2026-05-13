@@ -15,6 +15,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +42,11 @@ class MainActivity : AppCompatActivity() {
         val tvHumidity = findViewById<TextView>(R.id.tvHumidity)
         val tvFeelsLike = findViewById<TextView>(R.id.tvFeelsLike)
         val tvWindSpeed = findViewById<TextView>(R.id.tvWindSpeed)
+
+        val rvForecast = findViewById<RecyclerView>(R.id.rvForecast)
+        val forecastAdapter = ForecastAdapter(emptyList())
+        rvForecast.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        rvForecast.adapter = forecastAdapter
 
         val sharedPref = getPreferences(Context.MODE_PRIVATE)
         val savedCity = sharedPref.getString("last_city", null)
@@ -83,6 +90,13 @@ class MainActivity : AppCompatActivity() {
 
                 val color = Color.parseColor(it.weather[0].getBackgroundColor())
                 rootLayout.setBackgroundColor(color)
+            }
+        }
+
+        viewModel.forecastData.observe(this) { forecast ->
+            forecast?.let {
+                val dailyForecast = it.list.filterIndexed { index, _ -> index % 8 == 0 }
+                forecastAdapter.updateData(dailyForecast)
             }
         }
 
